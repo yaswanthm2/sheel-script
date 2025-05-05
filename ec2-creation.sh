@@ -6,7 +6,7 @@ N=\e[0m     #it will give normal color to text
 
 DATE=$(date +%F)
 SCRIPTFILE_NAME=$0
-LOG-FILE=/tmp/$SCRIPTFILE_NAME-$DATE.log
+LOG_FILE=/tmp/$SCRIPTFILE_NAME-$DATE.log
 
 INSATNCES_NAMES=("mongodb" "cart" "app" "mysql")
 
