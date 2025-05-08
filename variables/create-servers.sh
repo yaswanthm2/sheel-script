@@ -2,7 +2,7 @@
 
 R="\e[31m"
 G="\e[32m"
-N="\e[30"
+N="\e[0m"
 
 SERVER=$@
 INSTANCE_TYPE=
@@ -19,6 +19,6 @@ if [[ $i == "mongodb" || $i == "mysql" ]]
      INSTANCE_TYPE=t2.micro
 fi
 
-echo -e  " server name: $G $i $N "
-echo " instance type: $G $INSTANCE_TYPE $N "
+echo -e  " Server name: $G $i $N "
+echo -e " Instance type: $G $INSTANCE_TYPE $N "
   done
