@@ -32,8 +32,9 @@ IP_ADDRESS=$( aws ec2 run-instances \
   --security-group-ids $SECURITY_GROUP_ID \
   --count 1 \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]' | jq -r '.Instances[0].PrivateIpAddress' )
-exitstatuscode=$($?)
+
+Exitstatuscode=$($?)
 echo " Ip address of $i : $IP_ADDRESS "
-echo " exit status code: $exitstatuscode "
+echo " exit status code: $Exitstatuscode "
   done
 
