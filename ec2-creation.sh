@@ -33,7 +33,7 @@ IP_ADDRESS=$( aws ec2 run-instances \
   --count 1 \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]' | jq -r '.Instances[0].PrivateIpAddress' )
 
-Exitstatuscode=$($?)
+Exitstatuscode=$(echo $?)
 echo " Ip address of $i : $IP_ADDRESS "
 echo " exit status code: $Exitstatuscode "
   done
